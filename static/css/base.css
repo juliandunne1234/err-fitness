@@ -1,0 +1,13 @@
+html {
+    height: 100%;
+}
+
+.carousel-img {
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.carousel-caption {
+    background-color: rgba(244, 181, 63, 0.77);
+}
