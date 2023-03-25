@@ -11,3 +11,10 @@ html {
 .carousel-caption {
     background-color: rgba(244, 181, 63, 0.77);
 }
+
+.gym-service-img {
+    height: 35vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
