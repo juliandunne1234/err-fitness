@@ -1,0 +1,122 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields":{
+            "sku":"aq5001340327",
+            "name":"Battle Rope",
+            "description":"Battle Ropes are the  ultimate choice for high-intensity training sessions. The versatile rope allows you develop strength & cardiovascular fitness simultaneously.",
+            "image":"battle_rope.jpg",
+            "price":49.99,
+            "category":1
+       }
+    },
+    {
+        "pk":2,
+        "model":"products.product",
+        "fields":{
+            "sku":"bq5001340425",
+            "name":"Dumbbells",
+            "image":"dumbbell.jpg",
+            "description":"Dumbbells are ideal for home and gym use. High quality material and design. Great for weight loss, strength training and fitness.",
+            "price":39.99,
+            "category":1
+        }
+     },
+     {
+        "pk":3,
+        "model":"products.product",
+        "fields":{
+           "sku":"cq5001340777",
+           "name":"Kettlebells",
+           "image":"kettlebells.jpg",
+           "description":"Training kettlebells are sports equipment for performing a variety of exercises, the purpose of which is to develop muscle strength. Kettlebells are a popular piece of kit that will make your workouts more effective and varied.",
+           "price":45.99,
+           "category":1
+        }
+     },
+     {
+        "pk":4,
+        "model":"products.product",
+        "fields":{
+           "sku":"dq5001340132",
+           "name":"Skipping Rope",
+           "image":"skipping_rope.jpg",
+           "description":"The exercise skipping rope can shape your cardio endurance, stamina and speed, while improving the muscle tension of your whole body.",
+           "price":21.99,
+           "category":1
+        }
+     },
+     {
+        "pk":5,
+        "model":"products.product",
+        "fields":{
+           "sku":"eq5001340654",
+           "name":"Yoga Mat",
+           "image":"yoga_mat.jpg",
+           "description":"This fitness mat is perfect for use as a yoga mat, exercise mat, gymnastics mat, pilates mat, meditation mat, or even sports mat",
+           "price":12.99,
+           "category":1
+        }
+     },
+     {
+        "pk":6,
+        "model":"products.product",
+        "fields":{
+           "sku":"fq5001340343",
+           "name":"Dark Chocolate",
+           "image":"dark_chocolate.jpg",
+           "description":"Rich & bitter dark chocolate.\" Dark chocolate (93%) (Cocoa Mass, Sugar, Cocoa Butter)\" 108g x 5 packs",
+           "price":9.99,
+           "category":2
+        }
+     },
+     {
+        "pk":7,
+        "model":"products.product",
+        "fields":{
+           "sku":"gq5001340777",
+           "name":"Energy Bar",
+           "image":"energy_bar.jpg",
+           "description":"A Convenient Pre-Workout Snack That Slowly Releases Energy Keeping You Focused and on Top of Your Game\" Each pack contains 24 x 90g Chocolate & Toffee bars",
+           "price":19.99,
+           "category":2
+        }
+     },
+     {
+        "pk":8,
+        "model":"products.product",
+        "fields":{
+           "sku":"hq5001340377",
+           "name":"Protein Shake",
+           "image":"protein_shake.jpg",
+           "description":"Premium, high quality whey protein powder that provides 22 g of protein per serving\" Pack contains 1 Kilogram of protein powder.",
+           "price":19.99,
+           "category":2
+        }
+     },
+     {
+        "pk":9,
+        "model":"products.product",
+        "fields":{
+           "sku":"iq5001340747",
+           "name":"Seed Mix",
+           "image":"seed_mix.jpg",
+           "description":"High quality Fruit, Nut and Seed Mix.\" Contains Sweetened Dried Cranberries, Pumpkin Seeds, Sweetened Dried Sour Cherries, Sunflower Seeds.\" Consume a handful of Fruit, Nut and Seed Mix (approximately 25g) as a snack at any time of the day\" Bag mix weighs 300g",
+           "price":15.99,
+           "category":2
+        }
+     },
+     {
+        "pk":10,
+        "model":"products.product",
+        "fields":{
+           "sku":"jq5001340756",
+           "name":"Protein Balls",
+           "image":"protein_balls.jpg",
+           "description":"Perfect for anyone looking to increase their protein intake alongside a healthy, balanced diet.\" Available in dark milk and white chocolate varieties\" Approximate 20 * 22g balls per pack",
+           "price":19.99,
+           "category":2
+        }
+     }
+]
