@@ -2,6 +2,10 @@ html {
     height: 100%;
 }
 
+.header-container {
+    height: 70px;
+}
+
 .carousel-img {
     height: 60vh;
     object-fit: cover;
