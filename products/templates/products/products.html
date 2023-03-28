@@ -11,11 +11,131 @@
 {% endblock %}
 
 {% block content %}
-<div class="container my-3">
+
+<div class="product1">
     <div class="row">
-        <div class="col text-black">
-            {{ products }}
+        <div class="col store-space"></div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">ERR Store</h2>
+            <hr class="w-75 mb-1">
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h3>Equipment</h3>
+        </div>
+    </div>
+    <div class="slider-wrap">
+        <div class="slider-main" id="slider-main-equip">
+            {% for product in products %}
+                {% if product.category.name == "Equipment" %}
+                <div class="item">
+                    <div class="card">
+                        <a href="#">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                    </div>
+                    <div class="card-body pb-0">
+                        <p class="mb-0">{{ product.name }}</p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 border-0 text-left mb-1">
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <button class="slider-btn" id="prevEquip"><i class="fas fa-caret-left"></i></button>
+            <button class="slider-btn" id="nextEquip"><i class="fas fa-caret-right"></i></button>
+        </div>
+    </div>
+</div>
+<hr class="w-75 mb-1">
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h3>Supplements</h3>
+        </div>
+    </div>
+    <div class="slider-wrap">
+        <div class="slider-main" id="slider-main-supp">
+            {% for product in products %}
+                {% if product.category.name == "Supplement" %}
+                <div class="item">
+                    <div class="card">
+                        <a href="#">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                    </div>
+                    <div class="card-body pb-0">
+                        <p class="mb-0">{{ product.name }}</p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 border-0 text-left mb-1">
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <button class="slider-btn" id="prevSupp"><i class="fas fa-caret-left"></i></button>
+            <button class="slider-btn" id="nextSupp"><i class="fas fa-caret-right"></i></button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        var sliderMainEquip = document.getElementById('slider-main-equip')
+        var sliderMainSupp = document.getElementById('slider-main-supp')
+        var itemEquip = sliderMainEquip.getElementsByClassName('item')
+        var itemSupp = sliderMainSupp.getElementsByClassName('item')
+        var prevEquip = document.getElementById('prevEquip')
+        var nextEquip = document.getElementById('nextEquip')
+        var prevSupp = document.getElementById('prevSupp')
+        var nextSupp = document.getElementById('nextSupp')
+
+        nextEquip.addEventListener('click', () => {
+            sliderMainEquip.append(itemEquip[0])
+        })
+
+        prevEquip.addEventListener('click', () => {
+            sliderMainEquip.prepend(itemEquip[itemEquip.length - 1])
+        })
+
+        nextSupp.addEventListener('click', () => {
+            sliderMainSupp.append(itemSupp[0])
+        })
+
+        prevSupp.addEventListener('click', () => {
+            sliderMainSupp.prepend(itemSupp[itemSupp.length - 1])
+        })
+
+
+
+    </script>
 {% endblock %}
