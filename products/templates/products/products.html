@@ -12,12 +12,6 @@
 
 {% block content %}
 
-<div class="product1">
-    <div class="row">
-        <div class="col store-space"></div>
-    </div>
-</div>
-
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
@@ -39,7 +33,7 @@
                 {% if product.category.name == "Equipment" %}
                 <div class="item">
                     <div class="card">
-                        <a href="#">
+                        <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                     </div>
@@ -79,7 +73,7 @@
                 {% if product.category.name == "Supplement" %}
                 <div class="item">
                     <div class="card">
-                        <a href="#">
+                        <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                     </div>
