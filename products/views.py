@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from django.views import generic
+from .models import Product, Review
+from .forms import ReviewForm
 
 
 def all_products(request):
@@ -16,9 +18,12 @@ def all_products(request):
 def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
+    product_reviews = Review.objects.filter(product=product)
 
     context = {
         'product': product,
+        'product_reviews': product_reviews,
+        'review_form': ReviewForm(),
     }
 
     return render(request, 'products/product_detail.html', context)

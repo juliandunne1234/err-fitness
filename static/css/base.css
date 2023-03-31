@@ -77,6 +77,17 @@ html {
     object-position: center;
 }
 
+/* Product detail page */
+input[type=text] {
+    width: 20%;
+    padding: 21px 20px;
+    margin: 14px 0;
+    box-sizing: border-box;
+    font-size: 33;
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 350px) {
     .header-container {

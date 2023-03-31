@@ -40,5 +40,54 @@
     </div>
 </div>
 <hr class="w-75 mb-1">
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 text-left">
+            <h3>Reviews</h3>
+            <div class="row">
+                <div class="col-12 col-sm-6 text-left">
+                    {% if product_reviews %}
+                        {% for review in product_reviews %}
+                        <div class="card-body">
+                            <p class="font-weight-bold">
+                                {{ review.review_by }}
+                                <span class=" text-muted font-weight-normal">
+                                    {{ review.created_on }}
+                                </span>
+                            </p>
+                            {{ review.comment | safe }}
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="lead mb-5">There are no reviews for this product.</p>
+                        <a href="{% url 'products' %}" class="btn-danger btn-lg">Add comment</a>
+                        <a href="{% url 'products' %}" class="btn-primary btn-lg">Return to Store</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 text-left">
+            <h3>Leave a review</h3>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                        {% if user.is_authenticated %}
+                            <p>Posting as: {{ user.username }}</p>
+                            <form method="post">
+                                <p>
+                                    {{ review_form.comment }}
+                                </p>
+                                <p>
+                                    Rating {{ review_form.rating }}
+                                </p>
+                                {% csrf_token %}
+                                <button type="submit" class="btn-info btn-lg">Submit</button>
+                            </form>
+                        {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
