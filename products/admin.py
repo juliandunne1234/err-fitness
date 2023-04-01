@@ -23,9 +23,11 @@ class ReviewAdmin(SummernoteModelAdmin):
     list_display = (
         'product',
         'review_by',
-        'rating'
+        'rating',
+        'created_on'
     )
     summernote_fields = ('comment')
+    readonly_fields = ('created_on',)
 
 
 admin.site.register(Product, ProductAdmin)

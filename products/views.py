@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
-from django.views import generic
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib.auth.models import User
+from django.views.generic import CreateView
 from .models import Product, Review
 from .forms import ReviewForm
 
@@ -24,6 +25,12 @@ def product_detail(request, product_id):
         'product': product,
         'product_reviews': product_reviews,
         'review_form': ReviewForm(),
-    }
+        }
 
     return render(request, 'products/product_detail.html', context)
+
+
+class AddProductReview(CreateView):
+    model = Review
+    template_name = 'products/add_review.html'
+    fields = '__all__'

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -39,3 +40,6 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review {self.comment}"
+
+    def get_absolute_url(self):
+        return reverse('product_detail', args=(str(self.product_id)))
