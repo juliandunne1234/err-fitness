@@ -32,5 +32,5 @@ def product_detail(request, product_id):
 
 class AddProductReview(CreateView):
     model = Review
+    form_class = ReviewForm
     template_name = 'products/add_review.html'
-    fields = '__all__'
