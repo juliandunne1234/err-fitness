@@ -88,6 +88,14 @@ input[type=text] {
     border-radius: 4px;
   }
 
+/* Shopping Bag page */
+.img-shopping-bag {
+    height: 20vh;
+    width: 20vw;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 350px) {
     .header-container {

@@ -29,6 +29,7 @@ def bag_contents(request):
         'bag_items': bag_items,
         'total_cost': total_cost,
         'product_count': product_count,
+        'delivery_charge': settings.STANDARD_DELIVERY_CHARGE,
     }
 
     return context
