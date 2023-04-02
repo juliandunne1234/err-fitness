@@ -19,8 +19,10 @@
     </div>
     <div class="row">
         <div class="col">
-            {% if bag.items %}
-                <div class="table"></div>
+            {% if bag_items %}
+                <div class="table">
+                    {{ bag_items }}
+                </div>
             {% else %}
                 <h2 class="logo-font">Your bag is empty.</h2>
                 <a href="{% url 'products' %}" class="btn btn-dark btn-lg">Return to Store</a>
