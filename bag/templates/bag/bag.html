@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Current Order</h2>
+            <hr class="w-75 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if bag.items %}
+                <div class="table"></div>
+            {% else %}
+                <h2 class="logo-font">Your bag is empty.</h2>
+                <a href="{% url 'products' %}" class="btn btn-dark btn-lg">Return to Store</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
