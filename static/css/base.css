@@ -96,6 +96,10 @@ input[type=text] {
     object-position: center;
 }
 
+.remove-item {
+    cursor: pointer;
+}
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 350px) {
     .header-container {
