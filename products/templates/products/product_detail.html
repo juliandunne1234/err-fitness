@@ -90,21 +90,21 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-6 text-left">
+        <div class="col-12 col-md-8 text-left">
             <div class="row">
-                <div class="col-12 col-sm-6 text-left">
+                <div class="col-12 col-sm-8 text-left">
                     {% if product_reviews %}
-                    {% for review in product_reviews %}
-                    <div class="card-body">
-                        <p class="font-weight-bold">
-                            {{ review.review_by }}
-                            <span class=" text-muted font-weight-normal">
-                                {{ review.created_on }}
-                            </span>
-                        </p>
-                        {{ review.comment | safe }}
-                    </div>
-                    {% endfor %}
+                        {% for review in product_reviews %}
+                        <div class="card-body">
+                            <p class="font-weight-bold">
+                                {{ review.review_by }}
+                                <span class=" text-muted font-weight-normal">
+                                    {{ review.created_on }}
+                                </span>
+                            </p>
+                            {{ review.comment | safe }}
+                        </div>
+                        {% endfor %}
                     {% else %}
                     <p class="lead mb-5">Currently there are no reviews for this product.</p>
                     {% endif %}
