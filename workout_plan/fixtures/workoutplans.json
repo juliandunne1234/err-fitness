@@ -1,0 +1,65 @@
+[
+    {
+        "pk": 1,
+        "model": "workout_plan.workoutplan",
+        "fields": {
+            "category": 1,
+            "workout_time": 45,
+            "day_of_week": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "workout_plan.workoutplan",
+        "fields": {
+            "category": 2,
+            "workout_time":45,
+            "day_of_week": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "workout_plan.workoutplan",
+        "fields": {
+            "category": 3,
+            "workout_time":45,
+            "day_of_week": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "workout_plan.workoutplan",
+        "fields": {
+            "category": 4,
+            "workout_time":45,
+            "day_of_week": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "workout_plan.workoutplan",
+        "fields": {
+            "category": 5,
+            "workout_time":45,
+            "day_of_week": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "workout_plan.workoutplan",
+        "fields": {
+            "category": 6,
+            "workout_time":45,
+            "day_of_week": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "workout_plan.workoutplan",
+        "fields": {
+            "category": 7,
+            "workout_time":45,
+            "day_of_week": 7
+        }
+    }
+]

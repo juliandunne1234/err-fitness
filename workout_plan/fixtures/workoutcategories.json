@@ -1,0 +1,65 @@
+[
+    {
+        "pk": 1,
+        "model": "workout_plan.workoutcategory",
+        "fields": {
+            "name": "low intensity",
+            "description":"Body weight and light weights only. Low intensity circuits. Starting the week should set you up not break you down.",
+            "image":"low_intensity.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "workout_plan.workoutcategory",
+        "fields": {
+            "name": "high intensity",
+            "description":"Body weight and light weights only. Increased intensity and circuit level difficulty. It is important to increase the level of difficulty as you progress from beginner to more advanced.",
+            "image":"high_intensity.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "workout_plan.workoutcategory",
+        "fields": {
+            "name": "heavy weight",
+            "description":"Heavy weights. Workout to build strength and power. Know your limits and overtime. Add/remove weight based on rep count.",
+            "image":"heavy_weight.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "workout_plan.workoutcategory",
+        "fields": {
+            "name": "stretching",
+            "description":"Stretching is vital to prevent injury. Additional benefits are a stronger core and increased flexibility. Both of which are curcial for maximising the benefits of weight training days.",
+            "image":"stretching.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "workout_plan.workoutcategory",
+        "fields": {
+            "name": "boxing",
+            "description":"Boxing has many benefits. Cardio, speed, endurance and power to name a few. This is a full body workout.",
+            "image":"boxing.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "workout_plan.workoutcategory",
+        "fields": {
+            "name": "running",
+            "description":"Running or even walking at a faster pace followed by stretching is very important and often gets overlooked. Working out should not just be about lifting weights. It should cover all areas.",
+            "image":"running.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "workout_plan.workoutcategory",
+        "fields": {
+            "name": "rest day",
+            "description":"Rest day is just as important as any of the workouts. The body needs time to build back up the tissues damaged while exercising.",
+            "image":"rest_day.jpg"
+        }
+    }
+]
