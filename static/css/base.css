@@ -117,6 +117,32 @@ input[type=text] {
     height: 2px;
 }
 
+/* Workout plan page */
+.card-img-plan {
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slider-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 68vh;
+}
+
+.slider-main {
+    position: absolute;
+    width: 100%;
+}
+
+.item {
+    width: 700px;
+    display: inline-block;
+    position: relative;
+    margin: 4px;
+}
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 

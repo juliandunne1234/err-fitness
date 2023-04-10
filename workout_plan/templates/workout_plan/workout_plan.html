@@ -13,40 +13,35 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Workout & Nutrition Plans</h2>
+            <h2 class="logo-font">Gym Classes</h2>
             <hr class="w-75 mb-1">
         </div>
     </div>
 </div>
 
 <div class="container">
-    <div class="slider-wrap">
-        <div class="slider-main" id="slider-main-supp">
-            {% for product in products %}
-            <div class="item">
-                <div class="card">
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
+    <div class="slider-wrap row text-center">
+        <div class="slider-main" id="slider-day-plan">
+            {% for workout in workout_plan_daily %}
+            <div class="item col-12">
+                <div class="card bg-warning">
+                    <p class="my-3"><span class="font-weight-bold">{{ workout.category.name | upper }}</span> - {{ workout.day_of_week }}</p>
+                    <img class="card-img-plan img-fluid" src="{{ workout.category.image.url }}" alt="{{ workout.category.name }}">
                 </div>
-                <div class="card-body pb-0">
-                    <p class="mb-0">{{ product.name }}</p>
-                </div>
-                <div class="card-footer bg-white pt-0 border-0 text-left mb-1">
-                    <div class="row">
-                        <div class="col">
-                            <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
-                        </div>
-                    </div>
+                <div class="card-body text-left mb-5">
+                    <p>{{ workout.category.description }}</p>
+                    <p>Session time: <span class="font-weight-bold">{{ workout.workout_time }}min</span></p>
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
+</div>
+<div>
     <div class="row">
         <div class="col text-center">
-            <button class="slider-btn" id="prevSupp"><i class="fas fa-caret-left"></i></button>
-            <button class="slider-btn" id="nextSupp"><i class="fas fa-caret-right"></i></button>
+            <button class="slider-btn" id="prevPlan"><i class="fas fa-caret-left"></i></button>
+            <button class="slider-btn" id="nextPlan"><i class="fas fa-caret-right"></i></button>
         </div>
     </div>
 </div>
@@ -55,29 +50,17 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
-        var sliderMainEquip = document.getElementById('slider-main-equip')
-        var sliderMainSupp = document.getElementById('slider-main-supp')
-        var itemEquip = sliderMainEquip.getElementsByClassName('item')
-        var itemSupp = sliderMainSupp.getElementsByClassName('item')
-        var prevEquip = document.getElementById('prevEquip')
-        var nextEquip = document.getElementById('nextEquip')
-        var prevSupp = document.getElementById('prevSupp')
-        var nextSupp = document.getElementById('nextSupp')
+        var sliderDayPlan = document.getElementById('slider-day-plan')
+        var itemPlan = sliderDayPlan.getElementsByClassName('item')
+        var prevPlan = document.getElementById('prevPlan')
+        var nextPlan = document.getElementById('nextPlan')
 
-        nextEquip.addEventListener('click', () => {
-            sliderMainEquip.append(itemEquip[0])
+        nextPlan.addEventListener('click', () => {
+            sliderDayPlan.append(itemPlan[0])
         })
 
-        prevEquip.addEventListener('click', () => {
-            sliderMainEquip.prepend(itemEquip[itemEquip.length - 1])
-        })
-
-        nextSupp.addEventListener('click', () => {
-            sliderMainSupp.append(itemSupp[0])
-        })
-
-        prevSupp.addEventListener('click', () => {
-            sliderMainSupp.prepend(itemSupp[itemSupp.length - 1])
+        prevPlan.addEventListener('click', () => {
+            sliderDayPlan.prepend(itemPlan[itemPlan.length - 1])
         })
     </script>
 {% endblock %}
