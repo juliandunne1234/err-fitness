@@ -20,10 +20,10 @@
 </div>
 
 <div class="container">
-    <div class="slider-wrap row text-center">
-        <div class="slider-main" id="slider-day-plan">
+    <div class="slider-wrap-plan row text-center">
+        <div class="slider-main-plan" id="slider-day-plan">
             {% for workout in workout_plan_daily %}
-            <div class="item col-12">
+            <div class="item-plan col-12">
                 <div class="card bg-warning">
                     <p class="my-3"><span class="font-weight-bold">{{ workout.category.name | upper }}</span> - {{ workout.day_of_week }}</p>
                     <img class="card-img-plan img-fluid" src="{{ workout.category.image.url }}" alt="{{ workout.category.name }}">
@@ -51,7 +51,7 @@
     {{ block.super }}
     <script type="text/javascript">
         var sliderDayPlan = document.getElementById('slider-day-plan')
-        var itemPlan = sliderDayPlan.getElementsByClassName('item')
+        var itemPlan = sliderDayPlan.getElementsByClassName('item-plan')
         var prevPlan = document.getElementById('prevPlan')
         var nextPlan = document.getElementById('nextPlan')
 

@@ -49,8 +49,6 @@ html {
     margin: 4px;
 }
 
-
-
 .image-container {
     height: 40vh;
 }
@@ -69,7 +67,6 @@ input[type=text] {
     margin: 14px 0;
     box-sizing: border-box;
     font-size: 33;
-    border: 2px solid red;
     border-radius: 4px;
   }
 
@@ -110,18 +107,18 @@ input[type=text] {
     object-position: center;
 }
 
-.slider-wrap {
+.slider-wrap-plan {
     position: relative;
     overflow: hidden;
     height: 68vh;
 }
 
-.slider-main {
+.slider-main-plan {
     position: absolute;
     width: 100%;
 }
 
-.item {
+.item-plan {
     width: 700px;
     display: inline-block;
     position: relative;
@@ -178,6 +175,17 @@ input[type=text] {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* login page */
+.signup input[type=text],
+.login input[type=text] {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 14px 0;
+    box-sizing: border-box;
+    font-size: 33;
+    border-radius: 4px;
+  }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 350px) {
