@@ -20,7 +20,7 @@ class DayOfWeek(models.Model):
 
 class WorkoutPlan(models.Model):
 
-    category = models.OneToOneField(WorkoutCategory, on_delete=models.CASCADE)
+    category = models.ForeignKey(WorkoutCategory, on_delete=models.CASCADE)
     workout_time = models.IntegerField(null=False, blank=False, default=45)
     day_of_week = models.OneToOneField(DayOfWeek, on_delete=models.CASCADE)
 

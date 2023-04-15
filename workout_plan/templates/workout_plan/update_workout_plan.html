@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2>Gym Classes</h2>
+            <h5>Update Workout Plan</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+            <form method="POST" action="{% url 'update_workout_plan' workout.id %}" class="add-product" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-center">
+                    <a class="btn btn-dark" href="{% url 'workout_plan' %}">Cancel</a>
+                    <button class="btn btn-warning" type="submit">Update Workout</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -25,7 +25,13 @@
             {% for workout in workout_plan_daily %}
             <div class="item-plan col-12">
                 <div class="card bg-warning">
-                    <p class="my-3"><span class="font-weight-bold">{{ workout.category.name | upper }}</span> - {{ workout.day_of_week }}</p>
+                    <p class="my-3"><span class="font-weight-bold">{{ workout.category.name | upper }}</span> - {{ workout.day_of_week }}
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <a href="{% url 'update_workout_plan' workout.id %}" class="btn btn-dark">Update</a>
+                            {% endif %}
+                        {% endif %}
+                    </p>
                     <img class="card-img-plan img-fluid" src="{{ workout.category.image.url }}" alt="{{ workout.category.name }}">
                 </div>
                 <div class="card-body text-left mb-5">
