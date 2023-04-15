@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import WorkoutPlan
 from .forms import WorkoutForm
 
@@ -15,7 +16,13 @@ def workout_plan(request):
     return render(request, 'workout_plan/workout_plan.html', context)
 
 
+@login_required
 def update_workout_plan(request, workout_id):
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only superusers can do that.')
+        return redirect(reverse('home'))
+
     workout = get_object_or_404(WorkoutPlan, pk=workout_id)
     if request.method == 'POST':
         form = WorkoutForm(request.POST, instance=workout)
