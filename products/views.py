@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.views.generic import CreateView
 from .models import Product, Review
-from .forms import ReviewForm
+from .forms import ReviewForm, ProductForm
 
 
 def all_products(request):
@@ -34,3 +35,24 @@ class AddProductReview(CreateView):
     model = Review
     form_class = ReviewForm
     template_name = 'products/add_review.html'
+
+
+def add_product(request):
+    
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added a new product.')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Confirm the form is valid.')
+    else:
+        form = ProductForm()
+    
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

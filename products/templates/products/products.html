@@ -31,23 +31,25 @@
         <div class="slider-main" id="slider-main-equip">
             {% for product in products %}
                 {% if product.category.name == "Equipment" %}
-                <div class="item">
-                    <div class="card">
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                    </div>
-                    <div class="card-body pb-0">
-                        <p class="mb-0">{{ product.name }}</p>
-                    </div>
-                    <div class="card-footer bg-white pt-0 border-0 text-left mb-5">
-                        <div class="row">
-                            <div class="col">
-                                <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
+                    {% if product.image %}
+                    <div class="item">
+                        <div class="card">
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                        </div>
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left mb-5">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
         </div>
@@ -71,23 +73,25 @@
         <div class="slider-main" id="slider-main-supp">
             {% for product in products %}
                 {% if product.category.name == "Supplement" %}
-                <div class="item">
-                    <div class="card">
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                    </div>
-                    <div class="card-body pb-0">
-                        <p class="mb-0">{{ product.name }}</p>
-                    </div>
-                    <div class="card-footer bg-white pt-0 border-0 text-left mb-5">
-                        <div class="row">
-                            <div class="col">
-                                <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
+                    {% if product.image %}
+                    <div class="item">
+                        <div class="card">
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                        </div>
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left mb-5">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
         </div>

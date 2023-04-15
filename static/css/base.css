@@ -23,6 +23,10 @@ html {
     object-position: center;
 }
 
+.border-black {
+    border: 1px solid black !important;
+}
+
 /* Products page */
 .card-img-top{
     height: 20vh;
@@ -177,6 +181,7 @@ input[type=text] {
 }
 
 /* login page */
+.add-product input[type=text],
 .signup input[type=text],
 .login input[type=text] {
     width: 100%;
