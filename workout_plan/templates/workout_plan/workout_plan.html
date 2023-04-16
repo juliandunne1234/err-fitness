@@ -13,7 +13,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Gym Classes</h2>
+            <h2 class="display-5 text-uppercase">Gym Classes</h2>
             <hr class="w-75 mb-1">
         </div>
     </div>
@@ -25,10 +25,15 @@
             {% for workout in workout_plan_daily %}
             <div class="item-plan col-12">
                 <div class="card bg-warning">
-                    <p class="my-3"><span class="font-weight-bold">{{ workout.category.name | upper }}</span> - {{ workout.day_of_week }}
+                    <p class="my-2"><span class="font-weight-bold">{{ workout.category.name | upper }}</span> - {{ workout.day_of_week }}
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                                <a href="{% url 'update_workout_plan' workout.id %}" class="btn btn-dark">Update</a>
+                                <a href="{% url 'update_workout_plan' workout.id %}" class="btn btn-dark mx-2">
+                                    <span class="font-weight-bold px-2 d-none d-sm-block">Update Plan</span>
+                                    <span class="font-weight-bold px-2 d-block d-sm-none">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                </a>
                             {% endif %}
                         {% endif %}
                     </p>
@@ -46,8 +51,18 @@
 <div>
     <div class="row">
         <div class="col text-center">
-            <button class="btn btn-warning px-3 mx-2" id="prevPlan"><i class="fas fa-chevron-left"></i> Prev</button>
-            <button class="btn btn-warning px-3 mx-2" id="nextPlan">Next <i class="fas fa-chevron-right"></i></button>
+            <button class="btn btn-warning mx-2" id="prevPlan">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="font-weight-bold px-2">Prev</span>
+            </button>
+            <button class="btn btn-warning mx-2" id="nextPlan">
+                <span class="font-weight-bold px-2">Next</span>
+                <span class="icon">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </button>
         </div>
     </div>
 </div>

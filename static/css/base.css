@@ -23,10 +23,6 @@ html {
     object-position: center;
 }
 
-.border-black {
-    border: 1px solid black !important;
-}
-
 /* Products page */
 .card-img-top{
     height: 20vh;
@@ -90,7 +86,7 @@ input[type=text] {
 
 .message-container {
     position: fixed;
-    top: 140px;
+    top: 90px;
     right: 15px;
     z-index: 99999999999;
 }
@@ -180,6 +176,10 @@ input[type=text] {
     overflow-y: auto;
 }
 
+.legend-border {
+    border: 1px solid #aab7c4;
+}
+
 /* login page */
 .add-product input[type=text],
 .signup input[type=text],
@@ -193,7 +193,7 @@ input[type=text] {
   }
 
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 350px) {
+@media (max-width: 320px) {
     .header-container {
         padding-top: 100px;
     }

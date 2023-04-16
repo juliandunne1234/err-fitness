@@ -11,10 +11,11 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
+    <div class="row text-dark">
         <div class="col text-center mt-3">
-            <h2>Gym Classes</h2>
-            <h5>Update Workout Plan</h5>
+            <h2 class="display-5 text-uppercase">Gym Classes</h2>
+            <hr class="w-75 mb-1">
+            <h5 class="display-5">Update Workout Plan - {{ workout.day_of_week }}</h5>
         </div>
     </div>
     <div class="row">
@@ -23,8 +24,16 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-center">
-                    <a class="btn btn-dark" href="{% url 'workout_plan' %}">Cancel</a>
-                    <button class="btn btn-warning" type="submit">Update Workout</button>
+                    <a class="btn btn-dark mx-2" href="{% url 'workout_plan' %}">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="font-weight-bold px-2">Cancel</span>
+                    </a>
+                    <button class="btn btn-warning mx-2" type="submit">
+                        <span class="font-weight-bold px-2">Update</span>
+                        <span class="icon">
+                            <i class="fa fa-edit"></i>
+                        </span>
+                    </button>
                 </div>
             </form>
         </div>

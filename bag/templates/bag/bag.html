@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Current Order</h2>
+            <h2 class="display-5 text-uppercase">Current Order</h2>
         </div>
     </div>
     <div class="row">
@@ -71,14 +71,14 @@
                         </tr>
                         <tr>
                             <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn btn-dark btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-dark mx-2">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
+                                    <span class="font-weight-bold px-2">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'checkout' %}" class="btn btn-warning btn-lg">
-                                    <span class="text-uppercase">Secure Checkout</span>
+                                <a href="{% url 'checkout' %}" class="btn btn-warning mx-2">
+                                    <span class="font-weight-bold px-2">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
                                     </span>
@@ -88,12 +88,13 @@
                     </table>
                 </div>
             {% else %}
-                <h2 class="logo-font">Your bag is empty.</h2>
-                <a href="{% url 'products' %}" class="btn btn-dark btn-lg">
+                <hr class="w-10 mb-1">
+                <h2 class="display-5 text-dark my-1">Your bag is empty.</h2>
+                <a href="{% url 'products' %}" class="btn btn-dark mx-2">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Return to Store</span>
+                    <span class="font-weight-bold px-2">Return to Store</span>
                 </a>
             {% endif %}
         </div>

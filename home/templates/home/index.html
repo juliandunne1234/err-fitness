@@ -59,7 +59,7 @@
     </div>
 </div>
 
-<div class="container my-2 py-2">
+<div class="container text-dark my-2 py-2">
     <div class="row text-center py-2">
         <div class="col-12 text-center">
             <h2 class="display-5 text-uppercase">
@@ -74,12 +74,6 @@
                 nationwide. ERR Fitness has recently expanded with the launch of its e-commerce store providing both
                 supplement and equipment offers with next day delivery gauranteed.
             </p>
-            <ul class="list-inline text-center">
-                <li class="list-inline-item">Access to all gym classes</li>
-                <li class="list-inline-item">Personalised training plan</li>
-                <li class="list-inline-item">Access gyms nationwide</li>
-                <li class="list-inline-item">Online store</li>
-            </ul>
         </div>
     </div>
 </div>
@@ -109,49 +103,53 @@
     </div>
 </div>
 <div class="container my-2 py-2">
-    <div class="row">
-        <div class="col-12 d-md-none">
-            <h3 class="display-5 text-center">
-                Gym Classes
-            </h3>
+    <a href="{% url 'workout_plan' %}" class="text-dark text-decoration-none">
+        <div class="row">
+            <div class="col-12 d-md-none">
+                <h3 class="display-5 text-center">
+                    Gym Classes
+                </h3>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <h3 class="display-5 d-none d-md-block">
-                Gym Classes
-            </h3>
-            <p class="d-none d-md-block">
-                Members can take part in a range of gym classes ranging from heavy weights to cardio. Beginners to
-                advanced are welcome with classes structured so that everyone benefits.
-            </p>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h3 class="display-5 d-none d-md-block">
+                    Gym Classes
+                </h3>
+                <p class="d-none d-md-block">
+                    Members can take part in a range of gym classes ranging from heavy weights to cardio. Beginners to
+                    advanced are welcome with classes structured so that everyone benefits.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <img class="gym-service-img" src="/media/gym_carousel3.jpg" alt="gym classes">
+            </div>
         </div>
-        <div class="col-12 col-md-6">
-            <a href="{% url 'workout_plan' %}"><img class="gym-service-img" src="/media/gym_carousel3.jpg" alt="#"></a>
-        </div>
-    </div>
+    </a>
 </div>
 <div class="container my-2 py-2">
-    <div class="row">
-        <div class="col-12 d-md-none">
-            <h3 class="display-5 text-center">
-                ERR Store
-            </h3>
+    <a href="{% url 'products' %}" class="text-dark text-decoration-none">
+        <div class="row">
+            <div class="col-12 d-md-none">
+                <h3 class="display-5 text-center">
+                    ERR Store
+                </h3>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <a href="{% url 'products' %}"><img class="gym-service-img" src="/media/gym_store.jpg" alt="#"></a>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img class="gym-service-img" src="/media/gym_store.jpg" alt="gym shop">
+            </div>
+            <div class="col-12 col-md-6">
+                <h3 class="display-5 d-none d-md-block">
+                    ERR Store
+                </h3>
+                <p class="d-none d-md-block">
+                    We are currently growing our online presence through the ERR Fitness e-commerce store offering a range of both
+                    gym equipment and supplement options with next day delivery gauranteed.
+                </p>
+            </div>
         </div>
-        <div class="col-12 col-md-6">
-            <h3 class="display-5 d-none d-md-block">
-                ERR Store
-            </h3>
-            <p class="d-none d-md-block">
-                We are currently growing our online presence through the ERR Fitness e-commerce store offering a range of both
-                gym equipment and supplement options with next day delivery gauranteed.
-            </p>
-        </div>
-    </div>
+    </a>
 </div>
 {% endblock %}

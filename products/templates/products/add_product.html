@@ -10,11 +10,12 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container text-dark">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2>Product Management</h2>
-            <h5>Update ERR Store Inventory</h5>
+            <h2 class="display-5 text-uppercase">Product Management</h2>
+            <hr class="w-75 mb-1">
+            <h5 class="display-5">Update ERR Store Inventory</h5>
         </div>
     </div>
     <div class="row">
@@ -23,8 +24,18 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-center">
-                    <a class="btn btn-dark" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-warning" type="submit">Add Product</button>
+                    <a class="btn btn-dark mx-2" href="{% url 'products' %}">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold px-2">Cancel</span>
+                    </a>
+                    <button class="btn btn-warning mx-2" type="submit">
+                        <span class="font-weight-bold px-2">Add Item</span>
+                        <span class="icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </button>
                 </div>
             </form>
         </div>
