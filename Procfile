@@ -1,0 +1,1 @@
+web: gunicorn err_fitness.wsgi:application

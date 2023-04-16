@@ -40,7 +40,7 @@ class AddProductReview(CreateView):
 
 @login_required
 def add_product(request):
-    
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only superusers can do that.')
         return redirect(reverse('home'))
@@ -55,7 +55,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Confirm the form is valid.')
     else:
         form = ProductForm()
-    
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -66,7 +66,7 @@ def add_product(request):
 
 @login_required
 def delete_product(request, product_id):
-    
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only superusers can do that.')
         return redirect(reverse('home'))

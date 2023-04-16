@@ -7,7 +7,7 @@ class WorkoutForm(forms.ModelForm):
     class Meta:
         model = WorkoutPlan
         exclude = ('day_of_week', )
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

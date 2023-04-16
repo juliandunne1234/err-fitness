@@ -8,7 +8,7 @@ class ReviewForm(forms.ModelForm):
         fields = ('product', 'comment', 'rating', 'review_by')
 
         widgets = {
-            'product': forms.Select(attrs={'class': 'form-control',}),
+            'product': forms.Select(attrs={'class': 'form-control', }),
             'comment': forms.Textarea(attrs={'class': 'form-control'}),
             'rating': forms.NumberInput(attrs={'class': 'form-control', 'min': '0', 'max': '5'}),
             'review_by': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'reviewer_name', 'type': 'hidden'}),
@@ -20,7 +20,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
