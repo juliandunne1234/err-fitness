@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://err-fitness.herokuapp.com/sitemap.xml
