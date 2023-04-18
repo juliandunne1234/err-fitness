@@ -42,7 +42,7 @@ It is assumed that there will be an even split between users viewing the website
 
 ## User Stories
 
-See defined user stories [here](https://github.com/users/juliandunne1234/projects/15)
+See defined user stories [here](https://github.com/users/juliandunne1234/projects/18/views/3)
 
 ### **Epic 1 - Website Layout and Navigation**:
 1. As a user I can easily scroll through items by equipment and supplement so that I can see what is available in the store
@@ -129,7 +129,7 @@ There is also a shopping bag with the order total including standard delivery ch
 
 ### Footer
 
-The footer includes a newsletter sign up form that uses Mailchimp and social media icons that are also links to social media sites. 
+The footer includes a newsletter sign up form that uses Mailchimp and a facebook social media icon that is also a link to the social media site. For the purposes of this project and due to time constraints it was not possible to create a business page. 
 ![](assets/images/footer.jpg)
 
 
@@ -150,6 +150,16 @@ The homepage also includes the following subsections:
 This page displays all of the store items for sale. The products are seperated into gym equipment and supplement categories and the user can scroll through each item available in the store. Each item has an image, name, and price.
 
 ![](assets/images/all_products.jpg)
+
+Customers can log in and write a review for products. The reviews are displayed on the product detail page.
+
+![](assets/images/product_review.jpg)
+
+### Workout Plans
+
+This page displays daily workout for each day of the week including the type of workout, duration and can be updated by the superuser when logged in. 
+
+![](assets/images/workout_plan.jpg)
 
 ### Bag
 
@@ -184,9 +194,6 @@ If the payment can not be completed, the form does not submit, and an error mess
 A logged-in user can use the `my account` dropdown to select a link to the `My Profile` which contains their account details.
 
 The profile page can be used to update default shipping/billing address and contact information.
-
-![](assets/images/my-profile-customer-details.jpg)
-
 A list of all the orders previously made by the user are also displayed.
 
 ![](assets/images/my-profile-order-history.jpg)
